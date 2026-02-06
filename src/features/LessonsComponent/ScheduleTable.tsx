@@ -1,6 +1,6 @@
 import React from 'react';
 import { DAYS, SCHEDULE_TIMES } from './config';
-import { Lesson } from '../../app/lessons/types';
+import { Lesson } from './types';
 
 interface Props {
     lessons: Lesson[];

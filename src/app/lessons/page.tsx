@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { MOCK_API_USERS_URL } from '../../features/LessonsComponent/config';
-import { Lesson,Day, Status } from './types';
+import { Lesson,Day, Status } from '../../features/LessonsComponent/types';
 import { ScheduleTable } from '../../features/LessonsComponent/ScheduleTable';
 import { HomeworkModal } from '../../features/LessonsComponent/HomeworkModal';
 import {_Sidebar} from "@/src/widgets/HomeMenu/_Sidebar";

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Lesson, Status } from '../../app/lessons/types';
+import { Lesson, Status } from './types';
 import { DAYS, SCHEDULE_TIMES } from './config';
 
 interface Props {
@@ -21,7 +21,7 @@ export const HomeworkModal = ({ lesson, onClose, onStatusChange }: Props) => {
                     <header className="flex justify-between items-start mb-4">
                         <div>
                             <p className="text-[10px] font-bold text-indigo-500 uppercase">
-                                {DAYS[lesson.dayIndex]} • {SCHEDULE_TIMES[lesson.slotIndex].label}
+                                {lesson.day} • {SCHEDULE_TIMES[lesson.slotIndex].label}
                             </p>
                             <h2 className="text-xl font-bold">{lesson.title}</h2>
                         </div>

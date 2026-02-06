@@ -1,4 +1,4 @@
-import { Day, NavItem } from '../../app/lessons/types';
+import { Day, NavItem } from './types';
 
 export const MOCK_API_USERS_URL = "https://api.mock-provider.com/v1/users";
 
