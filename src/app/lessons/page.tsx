@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from 'react';
-import { MOCK_API_USERS_URL } from '../../features/LessonsComponent/config';
-import { Lesson,Day, Status } from '../../features/LessonsComponent/types';
-import { ScheduleTable } from '../../features/LessonsComponent/ScheduleTable';
-import { HomeworkModal } from '../../features/LessonsComponent/HomeworkModal';
-import {_Sidebar} from "@/src/widgets/HomeMenu/_Sidebar";
+import { MOCK_API_TASKS_URL } from '../../features/Components/config';
+import { Lesson,Day, Status } from '../../features/Components/types';
+import { ScheduleTable } from '@/src/features/Components/LessonsComponent/ScheduleTable';
+import { HomeworkModal } from '@/src/features/Components/LessonsComponent/HomeworkModal';
+import {_Sidebar} from "@/src/widgets/partial/_Sidebar";
 
 const initialData: Lesson[] = [
     {
@@ -43,13 +43,12 @@ export default function Dashboard() {
         <div className="flex min-h-screen bg-slate-50">
             {/* Левая часть: Сайдбар */}
             <_Sidebar />
-
             {/* Правая часть: Контент */}
-            <main className="flex-1 p-8 overflow-y-auto">
+            <main className="flex-1 p-8">
                 <div className="max-w-[1400px] mx-auto">
                     <header className="mb-8">
                         <h1 className="text-2xl font-black text-slate-800 uppercase tracking-tight">Расписание пар</h1>
-                        <p className="text-sm text-slate-500">API: {MOCK_API_USERS_URL}</p>
+                        <p className="text-sm text-slate-500">API: {MOCK_API_TASKS_URL}</p>
                     </header>
 
                     <ScheduleTable

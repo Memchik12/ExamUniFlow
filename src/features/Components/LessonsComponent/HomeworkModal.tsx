@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Lesson, Status } from './types';
-import { DAYS, SCHEDULE_TIMES } from './config';
+import { Lesson, Status } from '../types';
+import { DAYS, SCHEDULE_TIMES } from '../config';
 
 interface Props {
     lesson: Lesson;

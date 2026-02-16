@@ -1,6 +1,9 @@
 import { Day, NavItem } from './types';
 
-export const MOCK_API_USERS_URL = "https://api.mock-provider.com/v1/users";
+
+export const MOCK_API_TASKS_URL = "https://698790cc8bacd1d773edbce4.mockapi.io/tasks";
+export const MOCK_API_USERS_URL = "https://698790cc8bacd1d773edbce4.mockapi.io/users";
+
 
 export const DAYS: Day[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -13,7 +16,7 @@ export const SCHEDULE_TIMES = [
 ];
 
 export const SIDEBAR_MENU: NavItem[] = [
-    { label: 'Главная', path: '/', icon: '🏠' },
+    { label: 'Главная', path: '/profile', icon: '🏠' },
     { label: 'Мои уроки', path: '/lessons', icon: '📚' },
     { label: 'Задания', path: '/tasks', icon: '📝' },
     { label: 'Настройки', path: '/settings', icon: '⚙️' },

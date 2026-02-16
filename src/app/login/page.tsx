@@ -1,14 +1,17 @@
 "use client";
-import {useState} from "react";
+import { useState } from 'react';
 import {useAuth} from "@/src/features/Context/AuthContext";
-export default function Home() {
-    const [email, setEmail] = useState(''); // Твой пример
-    const [pass, setPass] = useState(''); // Твой пример
+
+export default function LoginPage() {
+    const [email, setEmail] = useState('Shakira55@gmail.com'); // Твой пример
+    const [pass, setPass] = useState('NZo9oaadpb64ETJ'); // Твой пример
     const { login } = useAuth();
     const [error, setError] = useState('');
 
-    const handleSubmit = async () => {
-        login(email, pass);
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const res = await login(email, pass);
+        if (!res.success) setError(res.msg);
     };
 
     return (
