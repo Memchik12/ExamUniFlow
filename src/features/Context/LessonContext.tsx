@@ -1,5 +1,6 @@
-"use client";
-import React, { createContext, useContext, useState, useEffect } from 'react';
+'use client'
+import React,{ createContext, useContext, useState, useEffect } from 'react';
+import {MOCK_API_TASKS_URL} from "@/src/features/Components/config";
 
 const TaskContext = createContext<any>(undefined);
 
@@ -9,7 +10,7 @@ export const TaskProvider = ({ children }: { children: React.ReactNode }) => {
 
     const fetchTasks = async () => {
         try {
-            const res = await fetch('https://698790cc8bacd1d773edbce4.mockapi.io/tasks');
+            const res = await fetch(MOCK_API_TASKS_URL);
             const data = await res.json();
             setTasks(data);
         } finally { setLoading(false); }
@@ -21,7 +22,7 @@ export const TaskProvider = ({ children }: { children: React.ReactNode }) => {
         const oldTask: any = tasks.find((t: any) => t.id === id);
         const fullTask = { ...oldTask, ...updates };
 
-        await fetch(`https://698790cc8bacd1d773edbce4.mockapi.io/tasks/${id}`, {
+        await fetch(`${MOCK_API_TASKS_URL}/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(fullTask)

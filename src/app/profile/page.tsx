@@ -10,7 +10,7 @@ export default function ProfilePage()
     const { user, logout } = useAuth(); // Берем из правильного контекста
     if (!user) return null;
     return (
-        <div className="flex min-h-screen ">
+        <form className="flex min-h-screen ">
             <_Sidebar/>
             <div className="max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-500 p-8">
                 <div
@@ -23,7 +23,7 @@ export default function ProfilePage()
                             <h2 className="text-3xl font-black text-slate-800">{user.name}</h2>
                             <span
                                 className="bg-indigo-600 text-white text-[10px] px-2 py-1 rounded-md uppercase font-bold tracking-widest">
-                            Студент
+                            {user.role}
                         </span>
                         </div>
                         <p className="text-slate-500 font-medium text-lg">{user.class}</p>
@@ -46,6 +46,6 @@ export default function ProfilePage()
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }

@@ -3,15 +3,16 @@ import { useState } from 'react';
 import {useAuth} from "@/src/features/Context/AuthContext";
 
 export default function LoginPage() {
-    const [email, setEmail] = useState('Shakira55@gmail.com'); // Твой пример
-    const [pass, setPass] = useState('NZo9oaadpb64ETJ'); // Твой пример
+    const [email, setEmail] = useState('Loyal55@yahoo.com'); // Твой пример
+    const [pass, setPass] = useState('123'); // Твой пример
     const { login } = useAuth();
-    const [error, setError] = useState('');
+    const [error, setError] = useState("Not logged in");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const res = await login(email, pass);
-        if (!res.success) setError(res.msg);
+        console.log(res);
+        if (!res.success) setError("Не верный Email или пароль");
     };
 
     return (

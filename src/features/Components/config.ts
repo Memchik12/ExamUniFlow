@@ -1,4 +1,4 @@
-import { Day, NavItem } from './types';
+import { Day } from './types';
 
 
 export const MOCK_API_TASKS_URL = "https://698790cc8bacd1d773edbce4.mockapi.io/tasks";
@@ -15,9 +15,3 @@ export const SCHEDULE_TIMES = [
     { label: "V пара", time: "15:05 - 16:25" },
 ];
 
-export const SIDEBAR_MENU: NavItem[] = [
-    { label: 'Главная', path: '/profile', icon: '🏠' },
-    { label: 'Мои уроки', path: '/lessons', icon: '📚' },
-    { label: 'Задания', path: '/tasks', icon: '📝' },
-    { label: 'Настройки', path: '/settings', icon: '⚙️' },
-];
